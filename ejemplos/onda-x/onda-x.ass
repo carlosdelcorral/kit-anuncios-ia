@@ -1,0 +1,73 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Lato Black,92,&H00FFFFFF,&H00FF59A2,&H00000000,&H50000000,0,0,0,0,100,100,0,0,1,9,4,5,40,40,40,1
+Style: Hook,Lato Black,82,&H00FFFFFF,&H00FF59A2,&H300B0B0B,&H00000000,0,0,0,0,100,100,0,0,3,22,0,5,40,40,40,1
+Style: Cartel,Lato Black,190,&H00FF59A2,&H00FF59A2,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,10,0,5,40,40,40,1
+Style: Resplandor,Lato Black,190,&H00FF59A2,&H00FF59A2,&H00FF59A2,&H00FF59A2,0,0,0,0,100,100,0,0,1,16,0,5,40,40,40,1
+Style: Producto,Lato Black,118,&H00FFFFFF,&H00FF59A2,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,6,0,5,40,40,40,1
+Style: Cta,Lato Black,64,&H00FFFFFF,&H00FF59A2,&H00FF59A2,&H00000000,0,0,0,0,100,100,0,0,3,26,0,5,40,40,40,1
+Style: Etiqueta,Lato Bold,34,&H10FFFFFF,&H00FFFFFF,&H70000000,&H00000000,0,0,0,0,100,100,0,0,3,10,0,7,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:01.88,0:00:02.36,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}PERO{\r} ¿DE DÓNDE
+Dialogue: 1,0:00:02.36,0:00:02.54,Sub,,0,0,0,,{\an5\pos(540,1130)}PERO {\c&H00FF59A2\fscx112\fscy112}¿DE{\r} DÓNDE
+Dialogue: 1,0:00:02.54,0:00:02.82,Sub,,0,0,0,,{\an5\pos(540,1130)}PERO ¿DE {\c&H00FF59A2\fscx112\fscy112}DÓNDE{\r}
+Dialogue: 1,0:00:02.82,0:00:02.96,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}ME{\r} HAN DADO?
+Dialogue: 1,0:00:02.96,0:00:03.06,Sub,,0,0,0,,{\an5\pos(540,1130)}ME {\c&H00FF59A2\fscx112\fscy112}HAN{\r} DADO?
+Dialogue: 1,0:00:03.06,0:00:03.64,Sub,,0,0,0,,{\an5\pos(540,1130)}ME HAN {\c&H00FF59A2\fscx112\fscy112}DADO?{\r}
+Dialogue: 1,0:00:05.18,0:00:05.34,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}LES{\r} OYES VENIR.
+Dialogue: 1,0:00:05.34,0:00:05.62,Sub,,0,0,0,,{\an5\pos(540,1130)}LES {\c&H00FF59A2\fscx112\fscy112}OYES{\r} VENIR.
+Dialogue: 1,0:00:05.62,0:00:06.15,Sub,,0,0,0,,{\an5\pos(540,1130)}LES OYES {\c&H00FF59A2\fscx124\fscy124}VENIR.{\r}
+Dialogue: 1,0:00:10.80,0:00:11.28,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}SONIDO{\r} 360.
+Dialogue: 1,0:00:11.28,0:00:12.26,Sub,,0,0,0,,{\an5\pos(540,1130)}SONIDO {\c&H00FF59A2\fscx112\fscy112}360.{\r}
+Dialogue: 1,0:00:12.26,0:00:12.56,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}OYES{\r} CADA PASO
+Dialogue: 1,0:00:12.56,0:00:12.80,Sub,,0,0,0,,{\an5\pos(540,1130)}OYES {\c&H00FF59A2\fscx112\fscy112}CADA{\r} PASO
+Dialogue: 1,0:00:12.80,0:00:13.14,Sub,,0,0,0,,{\an5\pos(540,1130)}OYES CADA {\c&H00FF59A2\fscx124\fscy124}PASO{\r}
+Dialogue: 1,0:00:13.14,0:00:13.36,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}Y{\r} SABES DE
+Dialogue: 1,0:00:13.36,0:00:13.58,Sub,,0,0,0,,{\an5\pos(540,1130)}Y {\c&H00FF59A2\fscx112\fscy112}SABES{\r} DE
+Dialogue: 1,0:00:13.58,0:00:13.72,Sub,,0,0,0,,{\an5\pos(540,1130)}Y SABES {\c&H00FF59A2\fscx112\fscy112}DE{\r}
+Dialogue: 1,0:00:13.72,0:00:13.90,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}DÓNDE{\r} VIENE.
+Dialogue: 1,0:00:13.90,0:00:14.42,Sub,,0,0,0,,{\an5\pos(540,1130)}DÓNDE {\c&H00FF59A2\fscx112\fscy112}VIENE.{\r}
+Dialogue: 1,0:00:14.42,0:00:14.66,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}ESTÁ{\r} SUBIENDO
+Dialogue: 1,0:00:14.66,0:00:14.96,Sub,,0,0,0,,{\an5\pos(540,1130)}ESTÁ {\c&H00FF59A2\fscx112\fscy112}SUBIENDO{\r}
+Dialogue: 1,0:00:14.96,0:00:15.10,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}POR{\r} LA ESCALERA.
+Dialogue: 1,0:00:15.10,0:00:15.20,Sub,,0,0,0,,{\an5\pos(540,1130)}POR {\c&H00FF59A2\fscx112\fscy112}LA{\r} ESCALERA.
+Dialogue: 1,0:00:15.20,0:00:16.16,Sub,,0,0,0,,{\an5\pos(540,1130)}POR LA {\c&H00FF59A2\fscx124\fscy124}ESCALERA.{\r}
+Dialogue: 1,0:00:16.16,0:00:16.50,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}VALE,{\r}
+Dialogue: 1,0:00:16.50,0:00:16.58,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}LE{\r} TENGO,
+Dialogue: 1,0:00:16.58,0:00:16.84,Sub,,0,0,0,,{\an5\pos(540,1130)}LE {\c&H00FF59A2\fscx124\fscy124}TENGO,{\r}
+Dialogue: 1,0:00:16.84,0:00:16.90,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}LE{\r} TENGO.
+Dialogue: 1,0:00:16.90,0:00:17.35,Sub,,0,0,0,,{\an5\pos(540,1130)}LE {\c&H00FF59A2\fscx124\fscy124}TENGO.{\r}
+Dialogue: 1,0:00:18.22,0:00:18.75,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}UNO.{\r}
+Dialogue: 1,0:00:19.94,0:00:20.67,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}DOS.{\r}
+Dialogue: 1,0:00:24.06,0:00:24.72,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx124\fscy124}VISTO.{\r}
+Dialogue: 1,0:00:27.66,0:00:28.02,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}PERFIL.{\r}
+Dialogue: 1,0:00:28.02,0:00:28.24,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}Y{\r} SI TE
+Dialogue: 1,0:00:28.24,0:00:28.36,Sub,,0,0,0,,{\an5\pos(540,1130)}Y {\c&H00FF59A2\fscx112\fscy112}SI{\r} TE
+Dialogue: 1,0:00:28.36,0:00:28.44,Sub,,0,0,0,,{\an5\pos(540,1130)}Y SI {\c&H00FF59A2\fscx112\fscy112}TE{\r}
+Dialogue: 1,0:00:28.44,0:00:28.72,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}VUELVEN{\r} A
+Dialogue: 1,0:00:28.72,0:00:28.80,Sub,,0,0,0,,{\an5\pos(540,1130)}VUELVEN {\c&H00FF59A2\fscx112\fscy112}A{\r}
+Dialogue: 1,0:00:28.80,0:00:29.28,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}MATAR,{\r}
+Dialogue: 1,0:00:29.28,0:00:29.60,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}YA{\r} NO SERÁ
+Dialogue: 1,0:00:29.60,0:00:29.72,Sub,,0,0,0,,{\an5\pos(540,1130)}YA {\c&H00FF59A2\fscx112\fscy112}NO{\r} SERÁ
+Dialogue: 1,0:00:29.72,0:00:29.88,Sub,,0,0,0,,{\an5\pos(540,1130)}YA NO {\c&H00FF59A2\fscx112\fscy112}SERÁ{\r}
+Dialogue: 1,0:00:29.88,0:00:30.04,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H00FF59A2\fscx112\fscy112}POR{\r} LOS CASCOS.
+Dialogue: 1,0:00:30.04,0:00:30.20,Sub,,0,0,0,,{\an5\pos(540,1130)}POR {\c&H00FF59A2\fscx112\fscy112}LOS{\r} CASCOS.
+Dialogue: 1,0:00:30.20,0:00:30.79,Sub,,0,0,0,,{\an5\pos(540,1130)}POR LOS {\c&H00FF59A2\fscx124\fscy124}CASCOS.{\r}
+Dialogue: 3,0:00:00.05,0:00:01.55,Hook,,0,0,0,,{\an5\pos(540,600)}{\fad(60,120)\fscx80\fscy80\t(0,120,\fscx104\fscy104)\t(120,200,\fscx100\fscy100)}¿TE MATAN Y NO\NSABES DE DÓNDE?
+Dialogue: 2,0:00:04.20,0:00:05.15,Resplandor,,0,0,0,,{\an5\pos(540,880)\fs142\blur14\alpha&H70&}{\fscx55\fscy55\frz-4\t(0,110,\fscx118\fscy118\frz-2)\t(110,210,\fscx100\fscy100)\fad(0,160)}NO ES LAG
+Dialogue: 3,0:00:04.20,0:00:05.15,Cartel,,0,0,0,,{\an5\pos(540,880)\fs142}{\fscx55\fscy55\frz-4\t(0,110,\fscx118\fscy118\frz-2)\t(110,210,\fscx100\fscy100)\fad(0,160)}NO ES LAG
+Dialogue: 2,0:00:22.72,0:00:23.72,Resplandor,,0,0,0,,{\an5\pos(540,880)\fs190\blur14\alpha&H70&}{\fscx55\fscy55\frz-4\t(0,110,\fscx118\fscy118\frz-2)\t(110,210,\fscx100\fscy100)\fad(0,160)}1 VS 3
+Dialogue: 3,0:00:22.72,0:00:23.72,Cartel,,0,0,0,,{\an5\pos(540,880)\fs190}{\fscx55\fscy55\frz-4\t(0,110,\fscx118\fscy118\frz-2)\t(110,210,\fscx100\fscy100)\fad(0,160)}1 VS 3
+Dialogue: 2,0:00:25.53,0:00:27.03,Resplandor,,0,0,0,,{\an5\pos(540,1120)\fs118\blur18\alpha&H60&}{\fad(180,220)\fscx92\fscy92\t(0,400,\fscx100\fscy100)}SONIDO 360°
+Dialogue: 3,0:00:25.53,0:00:27.03,Producto,,0,0,0,,{\an5\pos(540,1120)\fs118}{\fad(180,220)\fscx92\fscy92\t(0,400,\fscx100\fscy100)}SONIDO 360°
+Dialogue: 3,0:00:29.33,0:00:31.23,Cta,,0,0,0,,{\an5\pos(540,1000)\fs52}{\fad(80,150)\fscx85\fscy85\t(0,140,\fscx100\fscy100)}ONDA X · ENLACE EN EL PERFIL
+Dialogue: 4,0:00:00.00,0:00:31.23,Etiqueta,,0,0,0,,{\an7\pos(84,292)}Vídeo generado con IA

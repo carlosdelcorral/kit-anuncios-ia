@@ -1,0 +1,77 @@
+# Realismo · que no parezca IA
+
+Un avatar perfecto se lee como IA y deja de vender. El objetivo es que parezca **un vídeo de un
+creador grabado con el móvil**, no un render.
+
+## En la imagen (gpt-image-2 / sunburst)
+
+- **«Photorealistic» ya casi no hace nada.** Lo que funciona es hablar como un fotógrafo: `shot on
+  a real iPhone 15 Pro front camera`, `26mm` (selfie), `35mm` (plano de cámara), `50mm` (retrato),
+  `shallow depth of field`, una luz concreta (`cool screen glow on one side, warm desk lamp on the
+  other`).
+- **Pide la textura con palabras**: `natural skin texture with visible pores, slight facial
+  asymmetry, flyaway hairs, a few faint blemishes, real fabric texture, nothing airbrushed`.
+- **Negativos como instrucción**, en la misma frase: `Do not smooth the skin artificially. No
+  plastic skin, no beauty filter, no CGI, no 3D render, no doll-like face.`
+- **Declara la intención al final**: `The goal is for this to look like a candid frame from a real
+  creator's TikTok, not an AI render.`
+- **Un sitio real y un poco desordenado** (la cama sin hacer, una estantería con cosas): lo
+  ordenado y vacío se lee falso.
+- **Varias referencias → di qué define cada una**: `Reference Image 1 defines the young man — his
+  exact face, hair, hoodie — and his bedroom. Reference Image 2 defines the exact headset: do not
+  redesign it.`
+- **Ningún texto generado** salvo el que forma parte del producto (el logo del producto, el nombre
+  en la caja) — y para eso, `--modelo sunburst`, con el texto entre comillas y «spelled exactly».
+
+## De una imagen a muchas: ramificar, no encadenar
+
+Todos los planos salen **de la misma imagen base**, cada uno como una rama con tres bloques:
+
+```
+Change: <solo lo que cambia: la acción, el encuadre, el sitio>
+Preserve: the same person, same face and identity, same hoodie, same skin texture with visible
+pores, same bedroom and light.
+Match: same phone-camera look, same colour and direction of light.
+The result should look like the next frame of the same TikTok video.
+```
+
+Editar la edición de la edición degrada: la cara deriva. Si la escena cambia de sitio en cada
+plano (calle → tienda → calle), se usa el **último fotograma real** del clip anterior como base de
+la rama siguiente (`ffmpeg -sseof -0.25 -i clip.mp4 -frames:v 1 fin.png`).
+
+## En el vídeo (gemini-omni-1.1)
+
+- **Nunca quieto**: `realistic arm movements and subtle micro-movements.` va siempre.
+- **La naturalidad se nombra**: `blinks naturally`, `breathes`, `small head tilts while talking`,
+  `pauses before reacting`, `looks away before smiling`.
+- **Una acción física con consecuencia visible por clip**: se pone los cascos y se encienden las
+  luces; bebe y deja el vaso; empuja la caja hacia la cámara. La acción da el movimiento y la boca
+  acompaña. Sin acción, parece un maniquí que habla.
+- **La expresión se ordena en el tiempo**, no con adjetivos: `[0-2s] freezes and listens.
+  [2-4s] snaps back to the screen. [4-7s] says, excited: "…"`.
+- **Un solo movimiento de cámara, y lento**: `handheld selfie camera, slight natural sway` o
+  `static camera on top of the monitor, webcam style, locked off`. Los rápidos se hacen en montaje.
+- **La misma línea `Voice:` y el mismo acento en todos los clips** del personaje, palabra por
+  palabra. Si cambian, cambia la voz a mitad de anuncio.
+- **Nunca «cinematic»**: empuja hacia el anuncio pulido, justo lo que no queremos.
+
+## Checklist anti-robot (antes de dar un clip por bueno)
+
+1. ¿Hay una acción física con consecuencia visible?
+2. ¿Hay al menos dos micro-conductas nombradas?
+3. ¿La cámara hace algo (o la acción lo justifica)?
+4. ¿El plano cambia de tamaño o de ángulo respecto al anterior?
+5. ¿Cierra con `In a single continuous shot, no scene cuts.`?
+6. ¿Misma `Voice:` y mismo acento que el resto?
+7. ¿La cara sigue siendo la de la imagen base?
+8. ¿El guion cabe (≤ 20-25 palabras en 10 s)?
+9. ¿Lo revisó `kit.revisar` y no dice palabras que no estaban?
+10. ¿El anuncio lleva la etiqueta de IA y ningún testimonio falso?
+
+Si falla el 1 o el 2, el clip va a parecer IA aunque todo lo demás esté bien.
+
+## Lo que el montaje arregla (y lo que no)
+
+El editor unifica la textura (grano fino, un punto de contraste, viñeta), esconde las juntas
+(barrido, flash, audio que se adelanta) y quita lo que sobra (pausas, repeticiones). Lo que no
+arregla: una cara que ha derivado, manos deformes o una voz distinta. Eso se regenera.

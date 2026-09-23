@@ -1,0 +1,530 @@
+{
+ "_nota": "ONDA X «Skill issue». Omni (cara y voz) + seedance (juego, manos, producto). Música de Lyria a 140,6 BPM: los insertos duran múltiplos de un tiempo (0,427 s). Hasta que se pone los cascos todo suena «apagado» (mono, sin agudos); al ponérselos, el sonido se abre.",
+ "salida": "onda-x.mp4",
+ "estilo": {
+  "fuente": "Lato Black",
+  "texto": "#FFFFFF",
+  "acento": "#A259FF",
+  "mayusculas": true
+ },
+ "etiqueta_ia": "Vídeo generado con IA",
+ "subtitulos": {
+  "resaltar": [
+   "lag",
+   "venir",
+   "paso",
+   "escalera",
+   "tengo",
+   "visto",
+   "cascos"
+  ]
+ },
+ "musica": {
+  "archivo": "audio/musica.wav",
+  "desde": 0.19,
+  "db": -7,
+  "ducking": true,
+  "ducking_db": 7,
+  "apagada": [
+   [
+    0,
+    {
+     "plano": 6,
+     "t": 0.85
+    }
+   ]
+  ],
+  "silencios": [
+   [
+    {
+     "plano": 13,
+     "t": 0.75
+    },
+    {
+     "plano": 15,
+     "t": 0.0
+    }
+   ]
+  ]
+ },
+ "planos": [
+  {
+   "clip": "vid/s1.mp4",
+   "desde": 2.75,
+   "hasta": 4.35,
+   "voz": false,
+   "zoom": {
+    "entrada": 0.06,
+    "empuje": 0.05
+   },
+   "efectos": [
+    {
+     "tipo": "tinte",
+     "t": 0.48,
+     "dur": 0.32,
+     "color": "#FF1E1E",
+     "alfa": 0.35
+    },
+    {
+     "tipo": "sacudida",
+     "t": 0.5,
+     "fuerza": 28
+    }
+   ]
+  },
+  {
+   "clip": "vid/o1.mp4",
+   "desde": 2.95,
+   "hasta": 4.95,
+   "zoom": {
+    "entrada": 0.1,
+    "empuje": 0.04
+   }
+  },
+  {
+   "clip": "vid/o2.mp4",
+   "desde": 1.12,
+   "hasta": 4.66,
+   "apretar": true,
+   "zoom": {
+    "entrada": 0.06
+   },
+   "efectos": [
+    {
+     "tipo": "sacudida",
+     "t": 0.62,
+     "fuerza": 22
+    }
+   ]
+  },
+  {
+   "clip": "vid/s4.mp4",
+   "desde": 0.1,
+   "hasta": 1.38,
+   "voz": false,
+   "zoom": {
+    "empuje": 0.06
+   }
+  },
+  {
+   "clip": "vid/s4.mp4",
+   "desde": 2.45,
+   "hasta": 3.73,
+   "voz": false,
+   "zoom": {
+    "base": 1.12,
+    "entrada": 0.05
+   }
+  },
+  {
+   "clip": "vid/s5.mp4",
+   "desde": 0.3,
+   "hasta": 1.15,
+   "voz": false,
+   "zoom": {
+    "empuje": 0.08
+   }
+  },
+  {
+   "clip": "vid/o3.mp4",
+   "desde": 1.45,
+   "hasta": 7.55,
+   "apretar": true,
+   "zoom": {
+    "entrada": 0.05,
+    "empuje": 0.03
+   }
+  },
+  {
+   "clip": "vid/s2.mp4",
+   "desde": 0.0,
+   "hasta": 1.75,
+   "voz_de": "pip",
+   "zoom": {
+    "empuje": 0.05
+   },
+   "pip": {
+    "clip": "vid/o4.mp4",
+    "desde": 1.15,
+    "y_cara": 0.14
+   }
+  },
+  {
+   "clip": "vid/o4.mp4",
+   "desde": 5.1,
+   "hasta": 6.25,
+   "zoom": {
+    "base": 1.16,
+    "entrada": 0.08
+   }
+  },
+  {
+   "clip": "vid/s2.mp4",
+   "desde": 1.45,
+   "hasta": 2.35,
+   "voz": false,
+   "zoom": {
+    "base": 1.08,
+    "entrada": 0.06
+   },
+   "efectos": [
+    {
+     "tipo": "sacudida",
+     "t": 0.1,
+     "fuerza": 24
+    },
+    {
+     "tipo": "zoom_seco",
+     "t": 0.32,
+     "cantidad": 0.15
+    }
+   ]
+  },
+  {
+   "clip": "vid/o5.mp4",
+   "desde": 2.95,
+   "hasta": 3.5,
+   "zoom": {
+    "base": 1.18,
+    "entrada": 0.1
+   }
+  },
+  {
+   "clip": "vid/s3.mp4",
+   "voz": false,
+   "zoom": {
+    "base": 1.05
+   },
+   "efectos": [
+    {
+     "tipo": "rampa",
+     "tramos": [
+      [
+       0.8,
+       1.2,
+       1.0
+      ],
+      [
+       1.2,
+       1.6,
+       0.5
+      ],
+      [
+       1.6,
+       1.9,
+       1.5
+      ]
+     ]
+    },
+    {
+     "tipo": "sacudida",
+     "t": 0.42,
+     "fuerza": 26
+    }
+   ]
+  },
+  {
+   "clip": "vid/o5.mp4",
+   "desde": 3.92,
+   "hasta": 4.62,
+   "zoom": {
+    "entrada": 0.14
+   }
+  },
+  {
+   "clip": "vid/s2.mp4",
+   "desde": 3.3,
+   "hasta": 4.3,
+   "voz": false,
+   "zoom": {
+    "base": 1.06,
+    "entrada": 0.05
+   },
+   "efectos": [
+    {
+     "tipo": "zoom_seco",
+     "t": 0.08,
+     "cantidad": 0.12
+    },
+    {
+     "tipo": "glitch",
+     "t": 0.05,
+     "dur": 0.12
+    }
+   ]
+  },
+  {
+   "clip": "vid/o6.mp4",
+   "desde": 1.2,
+   "hasta": 5.95,
+   "apretar": true,
+   "zoom": {
+    "entrada": 0.08
+   },
+   "efectos": [
+    {
+     "tipo": "sacudida",
+     "t": 2.46,
+     "fuerza": 18
+    }
+   ]
+  },
+  {
+   "clip": "vid/c5.mp4",
+   "desde": 1.2,
+   "hasta": 3.6,
+   "audio": {
+    "clip": "vid/o7.mp4",
+    "desde": 0.95,
+    "hasta": 1.95
+   },
+   "zoom": {
+    "empuje": 0.06
+   },
+   "efectos": [
+    {
+     "tipo": "barrido_luz",
+     "t": 0.3,
+     "dur": 0.9
+    }
+   ]
+  },
+  {
+   "clip": "vid/o7.mp4",
+   "desde": 2.45,
+   "hasta": 5.75,
+   "apretar": true,
+   "zoom": {
+    "base": 1.08,
+    "entrada": 0.06
+   }
+  },
+  {
+   "clip": "vid/s5.mp4",
+   "desde": 1.7,
+   "hasta": 3.6,
+   "audio": {
+    "clip": "vid/o7.mp4",
+    "desde": 8.12,
+    "hasta": 9.5
+   },
+   "zoom": {
+    "empuje": 0.06
+   },
+   "voz_db": 3
+  }
+ ],
+ "juntas": [
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "barrido"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "flash"
+  },
+  {
+   "tipo": "corte",
+   "jcut": 0.2
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "barrido"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte",
+   "jcut": 0.15
+  }
+ ],
+ "rotulos": [
+  {
+   "plano": 0,
+   "t": 0.05,
+   "dur": 1.5,
+   "estilo": "hook",
+   "texto": "¿Te matan y no sabes de dónde?"
+  },
+  {
+   "plano": 2,
+   "t": 0.6,
+   "dur": 0.95,
+   "estilo": "cartel",
+   "texto": "No es lag"
+  },
+  {
+   "plano": 14,
+   "t": 2.46,
+   "dur": 1.0,
+   "estilo": "cartel",
+   "texto": "1 vs 3"
+  },
+  {
+   "plano": 15,
+   "t": 0.9,
+   "dur": 1.5,
+   "estilo": "producto",
+   "texto": "Sonido 360°"
+  },
+  {
+   "plano": 17,
+   "t": 0.0,
+   "dur": 1.9,
+   "estilo": "cta",
+   "texto": "ONDA X · enlace en el perfil"
+  }
+ ],
+ "sonidos": [
+  {
+   "plano": 0,
+   "t": 0.44,
+   "archivo": "audio/sfx-disparo.wav",
+   "apagado": true,
+   "db": 0
+  },
+  {
+   "plano": 0,
+   "t": 0.48,
+   "archivo": "audio/sfx-golpe.wav",
+   "apagado": true,
+   "db": -2,
+   "dur": 1.2
+  },
+  {
+   "plano": 2,
+   "t": 0.6,
+   "archivo": "audio/sfx-golpe.wav",
+   "db": -6,
+   "dur": 1.2
+  },
+  {
+   "plano": 3,
+   "t": -0.38,
+   "archivo": "audio/sfx-whoosh.wav",
+   "db": -8
+  },
+  {
+   "plano": 4,
+   "t": 0.1,
+   "archivo": "audio/sfx-encendido.wav",
+   "db": -6,
+   "dur": 1.4,
+   "apagado": true
+  },
+  {
+   "plano": 6,
+   "t": 0.7,
+   "archivo": "audio/sfx-encendido.wav",
+   "db": -3,
+   "dur": 1.6
+  },
+  {
+   "plano": 7,
+   "t": 0.0,
+   "archivo": "audio/sfx-pasos.wav",
+   "pan": "izq-der",
+   "db": -2,
+   "dur": 1.9
+  },
+  {
+   "plano": 9,
+   "t": 0.05,
+   "archivo": "audio/sfx-disparo.wav",
+   "db": -2,
+   "pan": "der"
+  },
+  {
+   "plano": 9,
+   "t": 0.3,
+   "archivo": "audio/sfx-disparo.wav",
+   "db": -3,
+   "pan": "der"
+  },
+  {
+   "plano": 9,
+   "t": 0.34,
+   "archivo": "audio/sfx-impacto.wav",
+   "db": -5,
+   "dur": 0.8
+  },
+  {
+   "plano": 11,
+   "t": 0.0,
+   "archivo": "audio/sfx-rafaga.wav",
+   "db": -2
+  },
+  {
+   "plano": 11,
+   "t": 0.4,
+   "archivo": "audio/sfx-impacto.wav",
+   "db": -3,
+   "dur": 0.9
+  },
+  {
+   "plano": 13,
+   "t": 0.05,
+   "archivo": "audio/sfx-impacto.wav",
+   "db": -3,
+   "dur": 0.9
+  },
+  {
+   "plano": 14,
+   "t": 2.46,
+   "archivo": "audio/sfx-golpe.wav",
+   "db": -13,
+   "dur": 1.2
+  },
+  {
+   "plano": 15,
+   "t": -0.38,
+   "archivo": "audio/sfx-whoosh.wav",
+   "db": -6
+  },
+  {
+   "plano": 15,
+   "t": 0.3,
+   "archivo": "audio/sfx-encendido.wav",
+   "db": -9,
+   "dur": 1.0
+  },
+  {
+   "plano": 15,
+   "t": 0.0,
+   "archivo": "audio/sfx-golpe.wav",
+   "db": -7,
+   "dur": 1.4
+  }
+ ]
+}

@@ -1,0 +1,454 @@
+[
+  {
+    "clip": "o1.mp4",
+    "texto": "¿Pero desde dónde me han dado?",
+    "voz_desde": 3.2600000000000016,
+    "voz_hasta": 4.64,
+    "desde": 3.16,
+    "hasta": 4.99,
+    "palabras": [
+      {
+        "texto": "¿Pero",
+        "inicio": 3.2600000000000016,
+        "fin": 3.74
+      },
+      {
+        "texto": "desde",
+        "inicio": 3.74,
+        "fin": 3.9
+      },
+      {
+        "texto": "dónde",
+        "inicio": 3.9,
+        "fin": 4.16
+      },
+      {
+        "texto": "me",
+        "inicio": 4.16,
+        "fin": 4.3
+      },
+      {
+        "texto": "han",
+        "inicio": 4.3,
+        "fin": 4.4
+      },
+      {
+        "texto": "dado?",
+        "inicio": 4.4,
+        "fin": 4.64
+      }
+    ],
+    "avisos": [
+      "dice palabras que no están en el guion: desde",
+      "le faltan: de"
+    ]
+  },
+  {
+    "clip": "o2.mp4",
+    "texto": "Tranquilo, no es lag. Es que no les oyes venir.",
+    "voz_desde": 1.2199999999999995,
+    "voz_hasta": 4.48,
+    "desde": 1.12,
+    "hasta": 4.83,
+    "palabras": [
+      {
+        "texto": "Tranquilo,",
+        "inicio": 1.2199999999999995,
+        "fin": 1.66
+      },
+      {
+        "texto": "no",
+        "inicio": 1.74,
+        "fin": 1.82
+      },
+      {
+        "texto": "es",
+        "inicio": 1.82,
+        "fin": 1.98
+      },
+      {
+        "texto": "lag.",
+        "inicio": 1.98,
+        "fin": 2.2
+      },
+      {
+        "texto": "Es",
+        "inicio": 3.1,
+        "fin": 3.54
+      },
+      {
+        "texto": "que",
+        "inicio": 3.54,
+        "fin": 3.66
+      },
+      {
+        "texto": "no",
+        "inicio": 3.66,
+        "fin": 3.78
+      },
+      {
+        "texto": "les",
+        "inicio": 3.78,
+        "fin": 3.96
+      },
+      {
+        "texto": "oyes",
+        "inicio": 3.96,
+        "fin": 4.22
+      },
+      {
+        "texto": "venir.",
+        "inicio": 4.22,
+        "fin": 4.48
+      }
+    ],
+    "avisos": [
+      "pausa de 0.9 s tras «lag.» (2.20 s)"
+    ]
+  },
+  {
+    "clip": "o3.mp4",
+    "texto": "Sonido 360. Oyes cada paso y sabes de dónde viene.",
+    "voz_desde": 2.32,
+    "voz_hasta": 7.32,
+    "desde": 2.22,
+    "hasta": 7.67,
+    "palabras": [
+      {
+        "texto": "Sonido",
+        "inicio": 2.32,
+        "fin": 3.1
+      },
+      {
+        "texto": "360.",
+        "inicio": 3.1,
+        "fin": 3.82
+      },
+      {
+        "texto": "Oyes",
+        "inicio": 4.52,
+        "fin": 5.2
+      },
+      {
+        "texto": "cada",
+        "inicio": 5.2,
+        "fin": 5.42
+      },
+      {
+        "texto": "paso",
+        "inicio": 5.42,
+        "fin": 5.78
+      },
+      {
+        "texto": "y",
+        "inicio": 5.78,
+        "fin": 6.5
+      },
+      {
+        "texto": "sabes",
+        "inicio": 6.5,
+        "fin": 6.74
+      },
+      {
+        "texto": "de",
+        "inicio": 6.74,
+        "fin": 6.88
+      },
+      {
+        "texto": "dónde",
+        "inicio": 6.88,
+        "fin": 7.02
+      },
+      {
+        "texto": "viene.",
+        "inicio": 7.02,
+        "fin": 7.32
+      }
+    ],
+    "avisos": [
+      "dice palabras que no están en el guion: 360",
+      "le faltan: trescientos, sesenta"
+    ]
+  },
+  {
+    "clip": "o4.mp4",
+    "texto": "Está subiendo por la escalera. Vale, le tengo, le tengo. Buah, qué buena. Imposible que me gane esta.",
+    "voz_desde": 0.9799999999999995,
+    "voz_hasta": 8.56,
+    "desde": 0.88,
+    "hasta": 8.91,
+    "palabras": [
+      {
+        "texto": "Está",
+        "inicio": 0.9799999999999995,
+        "fin": 1.38
+      },
+      {
+        "texto": "subiendo",
+        "inicio": 1.38,
+        "fin": 1.7
+      },
+      {
+        "texto": "por",
+        "inicio": 1.7,
+        "fin": 1.86
+      },
+      {
+        "texto": "la",
+        "inicio": 1.86,
+        "fin": 1.96
+      },
+      {
+        "texto": "escalera.",
+        "inicio": 1.96,
+        "fin": 2.36
+      },
+      {
+        "texto": "Vale,",
+        "inicio": 4.98,
+        "fin": 5.38
+      },
+      {
+        "texto": "le",
+        "inicio": 5.46,
+        "fin": 5.54
+      },
+      {
+        "texto": "tengo,",
+        "inicio": 5.54,
+        "fin": 5.74
+      },
+      {
+        "texto": "le",
+        "inicio": 5.8,
+        "fin": 5.86
+      },
+      {
+        "texto": "tengo.",
+        "inicio": 5.86,
+        "fin": 6.06
+      },
+      {
+        "texto": "Buah,",
+        "inicio": 6.42,
+        "fin": 6.7
+      },
+      {
+        "texto": "qué",
+        "inicio": 6.78,
+        "fin": 6.82
+      },
+      {
+        "texto": "buena.",
+        "inicio": 6.82,
+        "fin": 7.1
+      },
+      {
+        "texto": "Imposible",
+        "inicio": 7.52,
+        "fin": 7.92
+      },
+      {
+        "texto": "que",
+        "inicio": 7.92,
+        "fin": 8.04
+      },
+      {
+        "texto": "me",
+        "inicio": 8.04,
+        "fin": 8.16
+      },
+      {
+        "texto": "gane",
+        "inicio": 8.16,
+        "fin": 8.32
+      },
+      {
+        "texto": "esta.",
+        "inicio": 8.32,
+        "fin": 8.56
+      }
+    ],
+    "avisos": [
+      "pausa de 2.6 s tras «escalera.» (2.36 s)",
+      "dice palabras que no están en el guion: vale, le, tengo, le, tengo, buah, que, buena, imposible, que, me, gane"
+    ]
+  },
+  {
+    "clip": "o5.mp4",
+    "texto": "1, 2...",
+    "voz_desde": 1.8400000000000003,
+    "voz_hasta": 4.78,
+    "desde": 1.74,
+    "hasta": 5.13,
+    "palabras": [
+      {
+        "texto": "1,",
+        "inicio": 1.8400000000000003,
+        "fin": 3.24
+      },
+      {
+        "texto": "2...",
+        "inicio": 3.52,
+        "fin": 4.78
+      }
+    ],
+    "avisos": [
+      "dice palabras que no están en el guion: 1, 2",
+      "le faltan: uno, dos"
+    ]
+  },
+  {
+    "clip": "o6.mp4",
+    "texto": "1 contra 3, ni me han visto.",
+    "voz_desde": 3.180000000000001,
+    "voz_hasta": 5.68,
+    "desde": 3.08,
+    "hasta": 6.03,
+    "palabras": [
+      {
+        "texto": "1",
+        "inicio": 3.180000000000001,
+        "fin": 3.82
+      },
+      {
+        "texto": "contra",
+        "inicio": 3.82,
+        "fin": 4.08
+      },
+      {
+        "texto": "3,",
+        "inicio": 4.08,
+        "fin": 4.4
+      },
+      {
+        "texto": "ni",
+        "inicio": 4.72,
+        "fin": 5.12
+      },
+      {
+        "texto": "me",
+        "inicio": 5.12,
+        "fin": 5.26
+      },
+      {
+        "texto": "han",
+        "inicio": 5.26,
+        "fin": 5.36
+      },
+      {
+        "texto": "visto.",
+        "inicio": 5.36,
+        "fin": 5.68
+      }
+    ],
+    "avisos": [
+      "dice palabras que no están en el guion: 1, 3",
+      "le faltan: uno, tres"
+    ]
+  },
+  {
+    "clip": "o7.mp4",
+    "texto": "Onda X, enlace en el perfil, y si te vuelven a matar, ya no será por los cascos.",
+    "voz_desde": 0.8199999999999994,
+    "voz_hasta": 9.34,
+    "desde": 0.72,
+    "hasta": 9.69,
+    "palabras": [
+      {
+        "texto": "Onda",
+        "inicio": 0.8199999999999994,
+        "fin": 1.38
+      },
+      {
+        "texto": "X,",
+        "inicio": 1.38,
+        "fin": 1.64
+      },
+      {
+        "texto": "enlace",
+        "inicio": 2.36,
+        "fin": 2.94
+      },
+      {
+        "texto": "en",
+        "inicio": 2.94,
+        "fin": 3.02
+      },
+      {
+        "texto": "el",
+        "inicio": 3.02,
+        "fin": 3.1
+      },
+      {
+        "texto": "perfil,",
+        "inicio": 3.1,
+        "fin": 3.48
+      },
+      {
+        "texto": "y",
+        "inicio": 3.9,
+        "fin": 4.64
+      },
+      {
+        "texto": "si",
+        "inicio": 4.64,
+        "fin": 4.74
+      },
+      {
+        "texto": "te",
+        "inicio": 4.74,
+        "fin": 4.84
+      },
+      {
+        "texto": "vuelven",
+        "inicio": 4.84,
+        "fin": 5.12
+      },
+      {
+        "texto": "a",
+        "inicio": 5.12,
+        "fin": 5.2
+      },
+      {
+        "texto": "matar,",
+        "inicio": 5.2,
+        "fin": 5.48
+      },
+      {
+        "texto": "ya",
+        "inicio": 6.1,
+        "fin": 8.38
+      },
+      {
+        "texto": "no",
+        "inicio": 8.38,
+        "fin": 8.5
+      },
+      {
+        "texto": "será",
+        "inicio": 8.5,
+        "fin": 8.66
+      },
+      {
+        "texto": "por",
+        "inicio": 8.66,
+        "fin": 8.82
+      },
+      {
+        "texto": "los",
+        "inicio": 8.82,
+        "fin": 9.0
+      },
+      {
+        "texto": "cascos.",
+        "inicio": 9.0,
+        "fin": 9.34
+      }
+    ],
+    "avisos": [
+      "dice palabras que no están en el guion: x",
+      "le faltan: equis"
+    ]
+  }
+]

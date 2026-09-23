@@ -1,0 +1,23 @@
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Lo tuyo: tu perfil, tus anuncios y tu gasto no se suben
+mi-perfil.md
+anuncios/*
+!anuncios/.gitkeep
+gasto.jsonl
+
+# Temporales del montaje y de revisión
+ejemplos/**/_prueba*.json
+ejemplos/**/prueba-*.mp4
+*.48k.wav
+
+# macOS
+.DS_Store
