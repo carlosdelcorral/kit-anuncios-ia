@@ -21,3 +21,9 @@ ejemplos/**/prueba-*.mp4
 
 # macOS
 .DS_Store
+
+# Caché del montaje profesional (superresolución, máscaras, caras) y pruebas
+anuncios/**/pro/
+ejemplos/**/pro/
+ejemplos/**/f0*.png
+ejemplos/**/*.hoja.png

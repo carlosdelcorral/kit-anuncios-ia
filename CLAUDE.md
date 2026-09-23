@@ -10,7 +10,8 @@ con un editor propio. El usuario es un alumno que no sabe editar vídeo: habla c
 - **Entrada:** skill `crear-anuncio` (`.claude/skills/crear-anuncio/SKILL.md`). Cuando el usuario
   quiera un anuncio, un UGC, un reel para vender, ángulos, hooks, o traiga un guion, úsala.
 - **Comandos** (desde la raíz, con el `.venv` activo): `python -m kit.generar …`,
-  `python -m kit.revisar …`, `python -m kit.montar <anuncio.json>`. Detalle en `README.md`.
+  `python -m kit.revisar …`, `python -m kit.pro.montar <edicion.json>` (el editor profesional, el de
+  la entrega) o `python -m kit.montar <anuncio.json>` (borrador rápido). Detalle en `README.md`.
 - **Cada anuncio** en `anuncios/<slug>/` (`img/`, `vid/`, `audio/`, `guion.md`, `guion.json`,
   `anuncio.json`). Referencia completa: `ejemplos/onda-x/`.
 
@@ -26,8 +27,10 @@ con un editor propio. El usuario es un alumno que no sabe editar vídeo: habla c
    que mejor hace el español); `seedance` solo para objetos (rechaza caras).
 6. Ningún texto generado dentro de la imagen o el vídeo, salvo el nombre en el propio producto.
 7. Etiqueta de IA siempre (el editor la pone); ningún avatar da testimonio de cliente.
-8. Montaje **dinámico por defecto** (`references/montaje.md`): `apretar` en todo plano que habla,
-   un cambio cada 1-2,5 s, insertos sin cara, sonido real (nunca sintético), diálogo natural.
+8. **Edición profesional al terminar las generaciones** con el criterio de
+   `references/edicion-pro.md` y `kit.pro.montar`: algo cambia cada 0,5-1,5 s, un momento de cambio
+   donde imagen, color y sonido cambian a la vez, el subtítulo nunca tapa la boca (`"cara": true`),
+   sonido real (nunca sintético), diálogo natural.
 9. Revisar cada clip con `kit.revisar` antes de montar; arreglar en montaje lo que se pueda y
    regenerar solo el clip que no, avisando del coste.
 10. No tocar el `.env` ni mostrar la clave.

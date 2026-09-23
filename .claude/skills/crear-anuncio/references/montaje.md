@@ -1,4 +1,7 @@
-# Montaje · el `anuncio.json`
+# Montaje · el `anuncio.json` (editor sencillo)
+
+> **Para la entrega se usa el editor profesional** (`kit.pro.montar`, `edicion-pro.md`). Este editor
+> sirve para borradores rápidos.
 
 El anuncio entero se describe en un JSON y `python -m kit.montar anuncios/<slug>/anuncio.json`
 lo convierte en un MP4 1080×1920 a −14 LUFS con su `informe.md`. Cambiar el montaje es cambiar el

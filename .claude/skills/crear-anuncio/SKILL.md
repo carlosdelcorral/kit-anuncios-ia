@@ -1,6 +1,6 @@
 ---
 name: crear-anuncio
-description: Crea anuncios UGC y anuncios hiperrealistas verticales con avatares generados, de principio a fin — la primera vez hace un onboarding y guarda el perfil del usuario (negocio, público, mercado, acento, presupuesto, marca); en cada anuncio actúa de estratega de respuesta directa (voz del cliente, menú de ángulos, mecanismo, nivel de consciencia, con parada para que elija), escribe hook y guion plano a plano con su coste, genera personaje, producto y clips escena por escena con Replicate (gpt-image-2.5-sunburst + gemini-omni-1.1), los revisa y los monta con el editor del kit (efectos de cámara, sonido real, subtítulos, etiqueta de IA). Úsala cuando el usuario diga «quiero hacer un anuncio», «hazme un UGC», «un reel para vender…», «anuncio con avatar», pida ángulos o hooks, traiga un guion para rodarlo, o abra el kit por primera vez.
+description: Crea anuncios UGC y anuncios hiperrealistas verticales con avatares generados, de principio a fin — la primera vez hace un onboarding y guarda el perfil del usuario (negocio, público, mercado, acento, presupuesto, marca); en cada anuncio actúa de estratega de respuesta directa (voz del cliente, menú de ángulos, mecanismo, nivel de consciencia, con parada para que elija), escribe hook y guion plano a plano con su coste, genera personaje, producto y clips escena por escena con Replicate (gpt-image-2.5-sunburst + gemini-omni-1.1), los revisa y los edita con criterio de agencia con el editor profesional del kit (superresolución, subtítulos que nunca tapan la boca, texto detrás del sujeto, rampas, etalonaje antes/después, diseño sonoro, etiqueta de IA). Úsala cuando el usuario diga «quiero hacer un anuncio», «hazme un UGC», «un reel para vender…», «anuncio con avatar», pida ángulos o hooks, traiga un guion para rodarlo, o abra el kit por primera vez.
 ---
 
 # Crear un anuncio
@@ -32,7 +32,8 @@ pesado**: propones dolores, ángulos y guiones; él elige.
 - Lee `references/metodo.md` **entero** antes de la estrategia y otra vez antes del guion, y
   `references/hooks.md` y `references/entradas-de-camara.md` antes de proponer hooks.
 - Lee `references/realismo.md`, `references/planos.md` y `references/prompts.md` antes del primer
-  prompt, y `references/montaje.md` antes de escribir el `anuncio.json`.
+  prompt, y `references/edicion-pro.md` **entero** (el criterio de edición) y `references/edicion-json.md`
+  antes de montar.
 - Comprueba la clave: `python -m kit.generar comprobar`. Si falla, explica cómo arreglarlo
   (README, sección «La clave de Replicate») y para.
 
@@ -125,17 +126,28 @@ corrige solo lo que diga.
 9. Mira los fotogramas (una tira por clip, 2-4 por segundo) para decidir dónde cortar, qué trozo de
    cada inserto usar y si la cara se mantiene.
 
-## Fase 6 · Montaje
+## Fase 6 · Montaje profesional
 
-Escribe `anuncio.json` (`montaje.md`) con el color de acento del perfil y lanza
-`python -m kit.montar anuncios/<slug>/anuncio.json` (`--rapido` para un borrador). Revisa la salida:
-- Los **avisos** del editor: todo lo que diga FUERA DE ZONA se arregla antes de entregar.
-- El `informe.md`: duración, LUFS (−14 ±1), qué se oye (¿coincide con el guion?).
-- Una tira de fotogramas del MP4 final (uno por segundo): si hay un plano quieto de más de 3 s o
-  un silencio, no está terminado. Que ningún rótulo tape la etiqueta del producto.
+Cuando terminan las generaciones, **tú editas como un editor de agencia**: el criterio está en
+`references/edicion-pro.md` y es lo que diferencia este kit. No te saltes pasos:
 
-Enseña el MP4 y pregunta qué cambiar. Los cambios de montaje son gratis (solo se re-monta); los de
-contenido cuestan un clip: dilo.
+1. **Mira todo el material** (hoja de contactos de cada clip), elige la mejor toma de cada frase y
+   apunta lo que hay que evitar.
+2. **Mide**: `kit.revisar` (qué dice y dónde), los eventos de los insertos al fotograma y el tempo de
+   la música (`kit.sonido --ritmo`).
+3. **Decide el momento de cambio** (el drop) y escribe la escaleta por bloques: hook, problema, giro,
+   producto, cambio, demostración, clímax, marca y CTA. Cada bloque con su idea visual y sonora.
+4. **Escribe `edicion.json`** (`references/edicion-json.md`; parte de `ejemplos/onda-x/edicion.json`)
+   con el color de acento del perfil. `"cara": true` en todo plano con persona.
+5. **Prueba fotogramas sueltos** de los momentos clave:
+   `python -m kit.pro.montar anuncios/<slug>/edicion.json --fotos 20,120,260`. La primera vez prepara
+   el material (superresolución, máscaras, caras) y tarda unos minutos; luego va rápido.
+6. **Render completo**: `python -m kit.pro.montar anuncios/<slug>/edicion.json`. Lee el informe y sus
+   avisos, mira la hoja de contactos (`<salida>.hoja.png`) y corrige.
+
+Enseña el MP4 y pregunta qué cambiar. Los cambios de montaje son gratis; los de contenido cuestan un
+clip: dilo. (El editor sencillo, `kit.montar` con `anuncio.json` — `references/montaje.md` —, sirve
+para un borrador rápido, no para la entrega.)
 
 ## Fase 7 · Entrega
 

@@ -16,6 +16,14 @@ gaming inventados: creador a cámara, gameplay, diseño streamer, el sonido que 
 cascos, un despiece 3D. Con todo lo que lo hizo (imágenes, clips, música, efectos, guion,
 `anuncio.json`, informe). Coste: ≈3 USD.
 
+**La edición profesional:** cuando terminan las generaciones, el kit edita como un editor de
+agencia: superresolución de todos los clips, subtítulos que nunca tapan la boca, texto gigante
+**detrás** del sujeto, rampas de velocidad con cámara lenta fluida, un etalonaje que cambia cuando
+entra el producto, diseño sonoro con paneo y silencios, HUD, logotipo y CTA. Míralo en
+[`ejemplos/onda-x/onda-x-pro.mp4`](ejemplos/onda-x/onda-x-pro.mp4) (29 s, 27 planos, montado con
+[`edicion.json`](ejemplos/onda-x/edicion.json)); el criterio está escrito en
+[`edicion-pro.md`](.claude/skills/crear-anuncio/references/edicion-pro.md).
+
 **Segunda demo:** [`ejemplos/gelida/`](ejemplos/gelida/) — la más natural: un test de 24 h de una botella
 térmica inventada, con la hora en pantalla y el realismo de móvil del editor (temblor de mano,
 exposición y enfoque que respiran, grano de sensor). La prueba es un sonido: el hielo 19 horas después.
@@ -95,11 +103,14 @@ python -m kit.generar musica "<estilo, bpm, instrumental>" --out anuncios/x/audi
 python -m kit.generar sonido "<efecto>" --dur 2 --out anuncios/x/audio/sfx-golpe.wav
 python -m kit.sonido --ritmo anuncios/x/audio/musica.wav    # tempo, para cortar a golpe
 python -m kit.revisar anuncios/x/vid/*.mp4 --guion anuncios/x/guion.json
-python -m kit.montar  anuncios/x/anuncio.json          # --rapido borrador · --depurar guarda los planos
+python -m kit.pro.montar anuncios/x/edicion.json     # edición profesional · --rapido · --fotos 20,120
+python -m kit.montar  anuncios/x/anuncio.json          # editor sencillo, borradores
 python -m kit.generar gasto
 ```
 
-Volver a montar la demo (no genera nada, no gasta): `python -m kit.montar ejemplos/onda-x/anuncio.json`
+Volver a montar la demo (no genera nada, no gasta): `python -m kit.pro.montar ejemplos/onda-x/edicion.json`.
+La primera vez descarga tres modelos pequeños (superresolución, máscara de persona y caras, ~20 MB) y
+prepara el material en `pro/`: unos minutos; después, cada montaje tarda unos 2.
 
 Las plantillas de prompts, el formato de `anuncio.json` y el método están en
 `.claude/skills/crear-anuncio/references/`.
@@ -117,6 +128,7 @@ Las plantillas de prompts, el formato de `anuncio.json` y el método están en
 |---|---|
 | `.claude/skills/crear-anuncio/` | El asistente y su método |
 | `kit/` | `generar` (imagen, vídeo, música y efectos en Replicate), `revisar` (transcribe y avisa), `montar` (el editor), `efectos`, `subtitulos`, `sonido` (mezcla, ritmo), `zonas`, `transcribir` |
+| `kit/pro/` | El editor profesional: `montar` (edicion.json → MP4 + informe), `preparar` (superresolución, 72 fps, máscaras, caras), `grafismo`, `imagen` (etalonaje), `audio` (mezcla) |
 | `kit/assets/` | Tipografías (licencia OFL) |
 | `ejemplos/onda-x/` | La demo completa |
 | `anuncios/` | Tus anuncios |
