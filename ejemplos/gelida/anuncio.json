@@ -1,0 +1,341 @@
+{
+ "_nota": "GÉLIDA «Diecinueve horas». Test de 24 h con la hora en pantalla; empieza y acaba a las 03:12 (bucle). Las escenas de noche van sin música: susurro y hielo. Omni para la cara, seedance para los insertos. Lo-fi de Lyria a 112,5 BPM (un tiempo = 0,533 s).",
+ "salida": "gelida.mp4",
+ "estilo": {
+  "fuente": "Lato Black",
+  "texto": "#FFFFFF",
+  "acento": "#8FB39A",
+  "mayusculas": true
+ },
+ "etiqueta_ia": "Vídeo generado con IA",
+ "realismo": {
+  "grano": "movil"
+ },
+ "subtitulos": {
+  "resaltar": [
+   "hielo",
+   "aguanta",
+   "escuchad",
+   "horno",
+   "enteros",
+   "gélida"
+  ]
+ },
+ "musica": {
+  "archivo": "audio/musica.wav",
+  "db": -11,
+  "ducking": true,
+  "ducking_db": 6,
+  "silencios": [
+   [
+    0,
+    {
+     "plano": 1,
+     "t": 0.0
+    }
+   ],
+   [
+    {
+     "plano": 11,
+     "t": 0.6
+    },
+    999
+   ]
+  ]
+ },
+ "planos": [
+  {
+   "clip": "vid/o01.mp4",
+   "desde": 0.3,
+   "hasta": 5.6,
+   "apretar": true,
+   "abre_negro": 0.35,
+   "noche": 1.0,
+   "movil": {
+    "mano": 0.8,
+    "exposicion": true,
+    "enfoque": [
+     0.4
+    ],
+    "frontal": true
+   }
+  },
+  {
+   "clip": "vid/s02.mp4",
+   "desde": 0.5,
+   "hasta": 1.9,
+   "voz": false,
+   "movil": {
+    "mano": 0.4
+   }
+  },
+  {
+   "clip": "vid/o03.mp4",
+   "desde": 0.4,
+   "hasta": 6.6,
+   "apretar": true,
+   "movil": {
+    "mano": 0.9,
+    "exposicion": true,
+    "frontal": true
+   }
+  },
+  {
+   "clip": "vid/o04.mp4",
+   "desde": 6.95,
+   "hasta": 8.6,
+   "movil": {
+    "mano": 1.2,
+    "exposicion": true,
+    "frontal": true
+   },
+   "voz_db": 4
+  },
+  {
+   "clip": "vid/s05.mp4",
+   "desde": 0.3,
+   "hasta": 1.8,
+   "voz": false,
+   "zoom": {
+    "empuje": 0.04
+   }
+  },
+  {
+   "clip": "vid/o06.mp4",
+   "desde": 1.7,
+   "hasta": 3.25,
+   "movil": {
+    "mano": 0.9,
+    "exposicion": true,
+    "frontal": true
+   },
+   "voz_db": -3
+  },
+  {
+   "clip": "vid/o06.mp4",
+   "desde": 4.5,
+   "hasta": 6.3,
+   "zoom": {
+    "base": 1.1,
+    "entrada": 0.04
+   },
+   "movil": {
+    "mano": 0.9,
+    "exposicion": true,
+    "enfoque": [
+     0.9
+    ],
+    "frontal": true
+   },
+   "voz_db": -3
+  },
+  {
+   "clip": "vid/s07.mp4",
+   "desde": 0.2,
+   "hasta": 2.2,
+   "voz": false,
+   "movil": {
+    "mano": 0.6
+   }
+  },
+  {
+   "clip": "vid/o08.mp4",
+   "desde": 3.3,
+   "hasta": 4.95,
+   "movil": {
+    "mano": 0.8,
+    "exposicion": true,
+    "frontal": true
+   }
+  },
+  {
+   "clip": "vid/s09.mp4",
+   "desde": 0.0,
+   "hasta": 1.6,
+   "voz": false,
+   "noche": 0.4,
+   "movil": {
+    "mano": 0.7
+   }
+  },
+  {
+   "clip": "vid/s10.mp4",
+   "desde": 0.3,
+   "hasta": 1.9,
+   "voz": false,
+   "zoom": {
+    "empuje": 0.05
+   }
+  },
+  {
+   "clip": "vid/o11.mp4",
+   "desde": 0.3,
+   "hasta": 7.25,
+   "apretar": true,
+   "noche": 0.6,
+   "movil": {
+    "exposicion": true
+   }
+  }
+ ],
+ "juntas": [
+  {
+   "tipo": "negro"
+  },
+  {
+   "tipo": "corte",
+   "jcut": 0.15
+  },
+  {
+   "tipo": "barrido"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "corte",
+   "jcut": 0.15
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "barrido"
+  },
+  {
+   "tipo": "corte",
+   "jcut": 0.15
+  },
+  {
+   "tipo": "negro"
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "negro"
+  }
+ ],
+ "rotulos": [
+  {
+   "plano": 0,
+   "t": 0.4,
+   "dur": 1.8,
+   "estilo": "hora",
+   "texto": "03:12"
+  },
+  {
+   "plano": 1,
+   "t": 0.0,
+   "dur": 1.4,
+   "estilo": "hora",
+   "texto": "08:00"
+  },
+  {
+   "plano": 3,
+   "t": 0.0,
+   "dur": 1.4,
+   "estilo": "hora",
+   "texto": "12:30"
+  },
+  {
+   "plano": 4,
+   "t": 0.0,
+   "dur": 1.5,
+   "estilo": "hora",
+   "texto": "15:40 · 34 °C"
+  },
+  {
+   "plano": 7,
+   "t": 0.0,
+   "dur": 1.6,
+   "estilo": "hora",
+   "texto": "19:30"
+  },
+  {
+   "plano": 9,
+   "t": 0.0,
+   "dur": 1.5,
+   "estilo": "hora",
+   "texto": "22:40"
+  },
+  {
+   "plano": 10,
+   "t": 0.15,
+   "dur": 1.4,
+   "estilo": "producto",
+   "texto": "Seca por fuera"
+  },
+  {
+   "plano": 11,
+   "t": 0.1,
+   "dur": 1.6,
+   "estilo": "hora",
+   "texto": "03:12"
+  },
+  {
+   "plano": 11,
+   "t": 4.9,
+   "dur": 2.2,
+   "estilo": "cta",
+   "texto": "GÉLIDA · enlace en el perfil"
+  }
+ ],
+ "sonidos": [
+  {
+   "plano": 0,
+   "t": 0.0,
+   "archivo": "audio/sfx-hielo.wav",
+   "db": -2
+  },
+  {
+   "plano": 1,
+   "t": 0.1,
+   "archivo": "audio/sfx-cubitos.wav",
+   "db": -4
+  },
+  {
+   "plano": 2,
+   "t": 0.15,
+   "archivo": "audio/sfx-tapa.wav",
+   "db": -8
+  },
+  {
+   "plano": 3,
+   "t": 1.05,
+   "archivo": "audio/sfx-hielo2.wav",
+   "db": -4
+  },
+  {
+   "plano": 6,
+   "t": 0.55,
+   "archivo": "audio/sfx-hielo.wav",
+   "db": -5
+  },
+  {
+   "plano": 7,
+   "t": -0.35,
+   "archivo": "audio/sfx-aire.wav",
+   "db": -10
+  },
+  {
+   "plano": 7,
+   "t": 0.25,
+   "archivo": "audio/sfx-servir.wav",
+   "db": -4
+  },
+  {
+   "plano": 9,
+   "t": 0.0,
+   "archivo": "audio/sfx-metro.wav",
+   "db": -8,
+   "dur": 1.8
+  },
+  {
+   "plano": 11,
+   "t": 0.25,
+   "archivo": "audio/sfx-hielo2.wav",
+   "db": -6
+  }
+ ]
+}

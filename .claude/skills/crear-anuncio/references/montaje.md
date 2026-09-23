@@ -26,7 +26,11 @@ puntuó con un 5 y se rehízo):
    después se oyen, no se cuentan (`musica.apagada` + `"apagado": true` en los efectos).
 7. **El remate del final**, mejor sobre el producto que sobre la cara: la última frase con `audio`
    de otro clip encima del plano de producto, y medio segundo más de plano para que aterrice.
-8. **Un momento a voz sola**: callar la música justo en la frase fuerte («uno contra tres») y que
+8. **Que parezca un móvil, no una cámara de cine**: `"realismo": {"grano": "movil", "voz": "solapa"}`
+   en todo el anuncio y `"movil": {"mano": 1, "exposicion": true, "frontal": true}` en los planos que
+   «sujeta» una persona (selfies, andando). **Nunca `mano` en un plano que nadie podría sostener** (el
+   cenital del techo, el coche fijo): un temblor imposible delata más que ninguno.
+9. **Un momento a voz sola**: callar la música justo en la frase fuerte («uno contra tres») y que
    vuelva de golpe en el siguiente plano pesa más que cualquier efecto.
 
 ## Cómo se decide cada corte
@@ -36,7 +40,10 @@ puntuó con un 5 y se rehízo):
 2. **Los bordes** (`desde`/`hasta`) se ponen a mano: entrada ~0,1 s antes de la primera palabra y
    salida ~0,2 s después de la última. Whisper adelanta la primera palabra; en interiores fíate de
    la envolvente (`revision.json` trae ambas pistas).
-3. **Las pausas de dentro** las quita `apretar`. Si el modelo añadió una frase buena que no estaba
+3. **Las pausas de dentro** las quita `apretar` — en interiores. En exteriores (calle, coche, terraza)
+   el ambiente tapa los silencios y la envolvente no los ve: ahí se parte el plano a mano con los tiempos
+   de cada palabra de `revision.json` (y se quitan las repeticiones que mete omni, «mediodía, mediodía»).
+   Si la hora o el sitio ya salen en pantalla, la frase que lo dice sobra. Si el modelo añadió una frase buena que no estaba
    en el guion (pasa: «vale, le tengo, le tengo»), úsala en un plano propio.
 4. **Lo que se estropea al final de un clip** (un logo que aparece en la ropa, una mano rara) se deja
    fuera con `hasta`, y la frase que faltaba se pone con `audio` sobre otro plano.
@@ -49,6 +56,7 @@ puntuó con un 5 y se rehízo):
   "estilo": {"fuente": "Lato Black", "texto": "#FFFFFF", "acento": "#A259FF", "mayusculas": true},
   "etiqueta_ia": "Vídeo generado con IA",          // obligatoria con personas generadas
   "subtitulos": {"activos": true, "resaltar": ["lag", "cascos"]},
+  "realismo": {"grano": "movil", "voz": "solapa"},  // grano de sensor que sube en sombras; voz de micro de solapa
   "musica": {"archivo": "audio/musica.wav", "desde": 0.19, "db": -7, "ducking": true, "ducking_db": 7,
              "apagada": [[0, {"plano": 6, "t": 0.85}]],
              "silencios": [[{"plano": 13, "t": 0.75}, {"plano": 14, "t": 2.4}]]},
@@ -79,6 +87,9 @@ puntuó con un 5 y se rehízo):
 | `zoom.entrada` | Golpe de entrada: arranca un 5-14 % más grande y se asienta en 0,1 s |
 | `zoom.empuje` | Acercamiento lento a lo largo del plano (0,03-0,08) |
 | `efectos[]` | Ver abajo; `t` en segundos desde que empieza el plano |
+| `movil` | `{"mano": 0.5-1.2, "exposicion": true, "caidas": [t], "enfoque": [t], "frontal": true}`: temblor de mano (deriva lenta, no vibración), exposición y balance que respiran (con una caída en `t` cuando algo tapa la luz), el enfoque que busca en `t` (el producto se acerca a la lente), la distorsión del frontal del iPhone |
+| `abre_negro` | s en negro al principio del plano (el hook que empieza por el sonido) |
+| `noche` | 0-1: etalonaje de móvil a oscuras (más oscuro, frío, menos color). Los modelos iluminan de más las escenas de noche |
 
 ### `efectos[]`
 
@@ -98,6 +109,7 @@ puntuó con un 5 y se rehízo):
 | `corte` | Corte seco | Por defecto: casi todo |
 | `barrido` | Desenfoque horizontal (pon un whoosh en `t: -0.38` del plano siguiente) | Cambio de sitio, entrada al producto. 1-3 por anuncio |
 | `flash` | Fundido a blanco | El momento clave (se pone los cascos) |
+| `negro` | Fundido rápido a negro y desde negro | Saltos de hora o de noche |
 | `jcut` (s) | El audio del plano siguiente entra antes que su imagen | 0,15-0,3 s: esconde el primer fotograma quieto de un clip generado |
 
 ### `rotulos[]`
@@ -108,6 +120,7 @@ puntuó con un 5 y se rehízo):
 | `cartel` | 1-3 palabras gigantes en el color de acento, con golpe («NO ES LAG», «1 VS 3»). 1-2 por anuncio; tapa los subtítulos mientras dura |
 | `producto` | Claim sobre el plano de producto |
 | `cta` | La acción, sobre una caja de acento |
+| `hora` | La hora grande en la parte alta («03:12», «15:40 · 34 °C»), para los formatos de 24 h |
 
 El editor ajusta el tamaño a la zona segura y **avisa** de lo que quede fuera.
 

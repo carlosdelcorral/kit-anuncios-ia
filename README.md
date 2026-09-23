@@ -16,6 +16,10 @@ gaming inventados: creador a cámara, gameplay, diseño streamer, el sonido que 
 cascos, un despiece 3D. Con todo lo que lo hizo (imágenes, clips, música, efectos, guion,
 `anuncio.json`, informe). Coste: ≈3 USD.
 
+**Segunda demo:** [`ejemplos/gelida/`](ejemplos/gelida/) — la más natural: un test de 24 h de una botella
+térmica inventada, con la hora en pantalla y el realismo de móvil del editor (temblor de mano,
+exposición y enfoque que respiran, grano de sensor). La prueba es un sonido: el hielo 19 horas después.
+
 ## Lo que necesitas
 
 - **Claude Code** (el curso lo explica).

@@ -55,6 +55,26 @@ la rama siguiente (`ffmpeg -sseof -0.25 -i clip.mp4 -frames:v 1 fin.png`).
   palabra. Si cambian, cambia la voz a mitad de anuncio.
 - **Nunca «cinematic»**: empuja hacia el anuncio pulido, justo lo que no queremos.
 
+## Lo que dice la investigación de 2026 (y ya aplica el kit)
+
+- **La sincronía de labios de omni aguanta ~6-7 s**: la frase acaba en el segundo 7 y los 3 s finales
+  son una reacción callada (`[7-10s] No dialogue; …`). También da aire para cortar.
+- **La mirada va a la pantalla, no a la lente**: `Her eyes stay mostly on the phone screen just below
+  the lens, flicking up to the lens on key words; understated, not presenter-like.` Así mira alguien
+  que se graba.
+- **Encuadre imperfecto**: descentrado, la coronilla algo cortada, el antebrazo en el borde, «23mm»,
+  «iPhone HDR look». El encuadre perfecto se lee como producido.
+- **Vida detrás**: `at 5s a scooter passes behind her, out of focus`; un sitio real con trastos (llaves,
+  un plátano, correo).
+- **Sonido del sitio en el prompt**, siempre al final: cafetera, calle, coche cerrado, terraza con
+  murmullo que no se entiende. Lo que más delata la IA es una voz **demasiado limpia**, en el vacío.
+- **Lo que delata al espectador**: manos que mutan, espejos, extras deformes, texto raro, cámara sin
+  temblor, **un vaso que no baja al beber** (por eso nadie bebe en cámara), dos personas hablando a la vez.
+- **Producto opaco y prueba sonora**: una botella que no deja ver el nivel, un sonido (hielo, clic) que
+  diseñas tú. Lo que cambia de estado (llenar, derretir, batir) se cuenta con un **corte**, nunca dentro
+  de un clip.
+- **SynthID** va en todo lo que sale de omni: se conserva, y la etiqueta de IA también.
+
 ## Checklist anti-robot (antes de dar un clip por bueno)
 
 1. ¿Hay una acción física con consecuencia visible?

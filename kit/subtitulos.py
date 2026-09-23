@@ -97,6 +97,7 @@ class Ass:
             f"Style: Resplandor,{f},190,{acento},{acento},{acento},{acento},0,0,0,0,100,100,0,0,1,16,0,5,40,40,40,1",
             f"Style: Producto,{f},118,{blanco},{acento},{negro},{negro},0,0,0,0,100,100,0,0,1,6,0,5,40,40,40,1",
             f"Style: Cta,{f},64,{blanco},{acento},{acento},{negro},0,0,0,0,100,100,0,0,3,26,0,5,40,40,40,1",
+            f"Style: Hora,{f},104,{blanco},{acento},{_color('#000000', 0x40)},{_color('#000000', 0x70)},0,0,0,0,100,100,0,0,1,4,6,5,40,40,40,1",
             f"Style: Etiqueta,Lato Bold,34,{_color('#FFFFFF', 0x10)},{blanco},{_color('#000000', 0x70)},{negro},0,0,0,0,100,100,0,0,3,10,0,7,40,40,40,1",
         ]
         return ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nScaledBorderAndShadow: yes\n"
@@ -179,6 +180,12 @@ class Ass:
             px = encajar(texto, self.fuente, 64, ANCHO_UTIL - 60)
             self._dialogo(3, ini, fin, "Cta", f"{{\\an5\\pos(540,{y})\\fs{px}}}{anim}{_esc(texto)}")
             self._caja(f"cta «{texto}»", 540, y, ancho(texto, self.fuente, px) + 52, px * 1.2 + 52, ini)
+        elif estilo == "hora":
+            y = r.get("y", 470)
+            px = encajar(texto, self.fuente, 104)
+            anim = "{\\fad(90,160)\\fscx90\\fscy90\\t(0,140,\\fscx100\\fscy100)}"
+            self._dialogo(3, ini, fin, "Hora", f"{{\\an5\\pos(540,{y})\\fs{px}}}{anim}{_esc(texto)}")
+            self._caja(f"hora «{texto}»", 540, y, ancho(texto, self.fuente, px), px * 1.25, ini)
         elif estilo == "etiqueta":
             x, y = POS_ETIQUETA
             self._dialogo(4, ini, fin, "Etiqueta", f"{{\\an7\\pos({x},{y})}}{_esc(texto)}")

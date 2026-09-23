@@ -1,0 +1,323 @@
+[
+  {
+    "clip": "o01.mp4",
+    "texto": "Son las 3 de la mañana y esto sigue sonando a hielo.",
+    "voz_desde": 1.1600000000000013,
+    "voz_hasta": 5.52,
+    "desde": 1.06,
+    "hasta": 5.87,
+    "palabras": [
+      {
+        "texto": "Son",
+        "inicio": 1.1600000000000013,
+        "fin": 1.64
+      },
+      {
+        "texto": "las",
+        "inicio": 1.64,
+        "fin": 1.82
+      },
+      {
+        "texto": "3",
+        "inicio": 1.82,
+        "fin": 2.04
+      },
+      {
+        "texto": "de",
+        "inicio": 2.04,
+        "fin": 2.18
+      },
+      {
+        "texto": "la",
+        "inicio": 2.18,
+        "fin": 2.28
+      },
+      {
+        "texto": "mañana",
+        "inicio": 2.28,
+        "fin": 2.64
+      },
+      {
+        "texto": "y",
+        "inicio": 2.64,
+        "fin": 4.04
+      },
+      {
+        "texto": "esto",
+        "inicio": 4.04,
+        "fin": 4.28
+      },
+      {
+        "texto": "sigue",
+        "inicio": 4.28,
+        "fin": 4.52
+      },
+      {
+        "texto": "sonando",
+        "inicio": 4.52,
+        "fin": 4.94
+      },
+      {
+        "texto": "a",
+        "inicio": 4.94,
+        "fin": 5.08
+      },
+      {
+        "texto": "hielo.",
+        "inicio": 5.08,
+        "fin": 5.52
+      }
+    ],
+    "avisos": []
+  },
+  {
+    "clip": "o03.mp4",
+    "texto": "8 de la mañana, hielo hasta arriba, a ver cuánto aguanta.",
+    "voz_desde": 0.7400000000000007,
+    "voz_hasta": 6.34,
+    "desde": 0.64,
+    "hasta": 6.69,
+    "palabras": [
+      {
+        "texto": "8",
+        "inicio": 0.7400000000000007,
+        "fin": 1.44
+      },
+      {
+        "texto": "de",
+        "inicio": 1.44,
+        "fin": 1.56
+      },
+      {
+        "texto": "la",
+        "inicio": 1.56,
+        "fin": 1.68
+      },
+      {
+        "texto": "mañana,",
+        "inicio": 1.68,
+        "fin": 2.0
+      },
+      {
+        "texto": "hielo",
+        "inicio": 2.64,
+        "fin": 2.98
+      },
+      {
+        "texto": "hasta",
+        "inicio": 2.98,
+        "fin": 3.12
+      },
+      {
+        "texto": "arriba,",
+        "inicio": 3.12,
+        "fin": 3.48
+      },
+      {
+        "texto": "a",
+        "inicio": 3.92,
+        "fin": 5.56
+      },
+      {
+        "texto": "ver",
+        "inicio": 5.56,
+        "fin": 5.7
+      },
+      {
+        "texto": "cuánto",
+        "inicio": 5.7,
+        "fin": 5.98
+      },
+      {
+        "texto": "aguanta.",
+        "inicio": 5.98,
+        "fin": 6.34
+      }
+    ],
+    "avisos": []
+  },
+  {
+    "clip": "o04.mp4",
+    "texto": "Mediodía, mediodía. Escuchad.",
+    "voz_desde": 0.0,
+    "voz_hasta": 8.48,
+    "desde": 0.0,
+    "hasta": 8.83,
+    "palabras": [
+      {
+        "texto": "Mediodía,",
+        "inicio": 0.0,
+        "fin": 0.62
+      },
+      {
+        "texto": "mediodía.",
+        "inicio": 1.46,
+        "fin": 2.5
+      },
+      {
+        "texto": "Escuchad.",
+        "inicio": 7.08,
+        "fin": 8.48
+      }
+    ],
+    "avisos": [
+      "pausa de 0.8 s tras «Mediodía,» (0.62 s)",
+      "pausa de 4.6 s tras «mediodía.» (2.50 s)",
+      "repite «Mediodía,» en 0.00 s"
+    ]
+  },
+  {
+    "clip": "o06.mp4",
+    "texto": "esto es un horno y mira y mira",
+    "voz_desde": 1.8199999999999998,
+    "voz_hasta": 8.04,
+    "desde": 1.72,
+    "hasta": 8.39,
+    "palabras": [
+      {
+        "texto": "esto",
+        "inicio": 1.8199999999999998,
+        "fin": 2.46
+      },
+      {
+        "texto": "es",
+        "inicio": 2.46,
+        "fin": 2.6
+      },
+      {
+        "texto": "un",
+        "inicio": 2.6,
+        "fin": 2.74
+      },
+      {
+        "texto": "horno",
+        "inicio": 2.74,
+        "fin": 3.14
+      },
+      {
+        "texto": "y",
+        "inicio": 3.14,
+        "fin": 4.64
+      },
+      {
+        "texto": "mira",
+        "inicio": 4.64,
+        "fin": 4.88
+      },
+      {
+        "texto": "y",
+        "inicio": 7.18,
+        "fin": 7.82
+      },
+      {
+        "texto": "mira",
+        "inicio": 7.82,
+        "fin": 8.04
+      }
+    ],
+    "avisos": [
+      "pausa de 2.3 s tras «mira» (4.88 s)"
+    ]
+  },
+  {
+    "clip": "o08.mp4",
+    "texto": "7 de la tarde, cubitos enteros.",
+    "voz_desde": 0.0,
+    "voz_hasta": 4.64,
+    "desde": 0.0,
+    "hasta": 4.99,
+    "palabras": [
+      {
+        "texto": "7",
+        "inicio": 0.0,
+        "fin": 1.42
+      },
+      {
+        "texto": "de",
+        "inicio": 1.42,
+        "fin": 1.58
+      },
+      {
+        "texto": "la",
+        "inicio": 1.58,
+        "fin": 1.7
+      },
+      {
+        "texto": "tarde,",
+        "inicio": 1.7,
+        "fin": 2.04
+      },
+      {
+        "texto": "cubitos",
+        "inicio": 3.48,
+        "fin": 4.0
+      },
+      {
+        "texto": "enteros.",
+        "inicio": 4.0,
+        "fin": 4.64
+      }
+    ],
+    "avisos": [
+      "pausa de 1.4 s tras «tarde,» (2.04 s)"
+    ]
+  },
+  {
+    "clip": "o11.mp4",
+    "texto": "19 horas. Se llama Gélida. Enlace en el perfil.",
+    "voz_desde": 0.0,
+    "voz_hasta": 6.76,
+    "desde": 0.0,
+    "hasta": 7.11,
+    "palabras": [
+      {
+        "texto": "19",
+        "inicio": 0.0,
+        "fin": 1.56
+      },
+      {
+        "texto": "horas.",
+        "inicio": 1.56,
+        "fin": 2.1
+      },
+      {
+        "texto": "Se",
+        "inicio": 2.52,
+        "fin": 3.2
+      },
+      {
+        "texto": "llama",
+        "inicio": 3.2,
+        "fin": 3.48
+      },
+      {
+        "texto": "Gélida.",
+        "inicio": 3.48,
+        "fin": 4.12
+      },
+      {
+        "texto": "Enlace",
+        "inicio": 5.02,
+        "fin": 5.92
+      },
+      {
+        "texto": "en",
+        "inicio": 5.92,
+        "fin": 6.22
+      },
+      {
+        "texto": "el",
+        "inicio": 6.22,
+        "fin": 6.32
+      },
+      {
+        "texto": "perfil.",
+        "inicio": 6.32,
+        "fin": 6.76
+      }
+    ],
+    "avisos": [
+      "pausa de 0.9 s tras «Gélida.» (4.12 s)"
+    ]
+  }
+]

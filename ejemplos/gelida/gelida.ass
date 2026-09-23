@@ -1,0 +1,72 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Lato Black,92,&H00FFFFFF,&H009AB38F,&H00000000,&H50000000,0,0,0,0,100,100,0,0,1,9,4,5,40,40,40,1
+Style: Hook,Lato Black,82,&H00FFFFFF,&H009AB38F,&H300B0B0B,&H00000000,0,0,0,0,100,100,0,0,3,22,0,5,40,40,40,1
+Style: Cartel,Lato Black,190,&H009AB38F,&H009AB38F,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,10,0,5,40,40,40,1
+Style: Resplandor,Lato Black,190,&H009AB38F,&H009AB38F,&H009AB38F,&H009AB38F,0,0,0,0,100,100,0,0,1,16,0,5,40,40,40,1
+Style: Producto,Lato Black,118,&H00FFFFFF,&H009AB38F,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,6,0,5,40,40,40,1
+Style: Cta,Lato Black,64,&H00FFFFFF,&H009AB38F,&H009AB38F,&H00000000,0,0,0,0,100,100,0,0,3,26,0,5,40,40,40,1
+Style: Hora,Lato Black,104,&H00FFFFFF,&H009AB38F,&H40000000,&H70000000,0,0,0,0,100,100,0,0,1,4,6,5,40,40,40,1
+Style: Etiqueta,Lato Bold,34,&H10FFFFFF,&H00FFFFFF,&H70000000,&H00000000,0,0,0,0,100,100,0,0,3,10,0,7,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:01.20,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}SON{\r} LAS 3
+Dialogue: 1,0:00:01.20,0:00:01.38,Sub,,0,0,0,,{\an5\pos(540,1130)}SON {\c&H009AB38F\fscx112\fscy112}LAS{\r} 3
+Dialogue: 1,0:00:01.38,0:00:01.60,Sub,,0,0,0,,{\an5\pos(540,1130)}SON LAS {\c&H009AB38F\fscx112\fscy112}3{\r}
+Dialogue: 1,0:00:01.60,0:00:01.74,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}DE{\r} LA MAÑANA
+Dialogue: 1,0:00:01.74,0:00:01.84,Sub,,0,0,0,,{\an5\pos(540,1130)}DE {\c&H009AB38F\fscx112\fscy112}LA{\r} MAÑANA
+Dialogue: 1,0:00:01.84,0:00:02.20,Sub,,0,0,0,,{\an5\pos(540,1130)}DE LA {\c&H009AB38F\fscx112\fscy112}MAÑANA{\r}
+Dialogue: 1,0:00:02.20,0:00:02.52,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}Y{\r} ESTO SIGUE
+Dialogue: 1,0:00:02.52,0:00:02.72,Sub,,0,0,0,,{\an5\pos(540,1130)}Y {\c&H009AB38F\fscx112\fscy112}ESTO{\r} SIGUE
+Dialogue: 1,0:00:02.72,0:00:02.98,Sub,,0,0,0,,{\an5\pos(540,1130)}Y ESTO {\c&H009AB38F\fscx112\fscy112}SIGUE{\r}
+Dialogue: 1,0:00:02.98,0:00:03.40,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}SONANDO{\r} A
+Dialogue: 1,0:00:03.40,0:00:03.52,Sub,,0,0,0,,{\an5\pos(540,1130)}SONANDO {\c&H009AB38F\fscx112\fscy112}A{\r}
+Dialogue: 1,0:00:03.52,0:00:04.25,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}HIELO.{\r}
+Dialogue: 1,0:00:05.86,0:00:06.50,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}8{\r} DE LA
+Dialogue: 1,0:00:06.50,0:00:06.64,Sub,,0,0,0,,{\an5\pos(540,1130)}8 {\c&H009AB38F\fscx112\fscy112}DE{\r} LA
+Dialogue: 1,0:00:06.64,0:00:06.74,Sub,,0,0,0,,{\an5\pos(540,1130)}8 DE {\c&H009AB38F\fscx112\fscy112}LA{\r}
+Dialogue: 1,0:00:06.74,0:00:07.34,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}MAÑANA.{\r}
+Dialogue: 1,0:00:07.34,0:00:07.88,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}HIELO{\r} HASTA
+Dialogue: 1,0:00:07.88,0:00:08.02,Sub,,0,0,0,,{\an5\pos(540,1130)}HIELO {\c&H009AB38F\fscx112\fscy112}HASTA{\r}
+Dialogue: 1,0:00:08.02,0:00:08.66,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}ARRIBA.{\r}
+Dialogue: 1,0:00:08.66,0:00:09.02,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}A{\r} VER CUÁNTO
+Dialogue: 1,0:00:09.02,0:00:09.16,Sub,,0,0,0,,{\an5\pos(540,1130)}A {\c&H009AB38F\fscx112\fscy112}VER{\r} CUÁNTO
+Dialogue: 1,0:00:09.16,0:00:09.44,Sub,,0,0,0,,{\an5\pos(540,1130)}A VER {\c&H009AB38F\fscx112\fscy112}CUÁNTO{\r}
+Dialogue: 1,0:00:09.44,0:00:10.07,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}AGUANTA.{\r}
+Dialogue: 1,0:00:10.98,0:00:11.87,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}ESCUCHAD.{\r}
+Dialogue: 1,0:00:13.38,0:00:14.02,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}ESTO{\r} ES UN
+Dialogue: 1,0:00:14.02,0:00:14.14,Sub,,0,0,0,,{\an5\pos(540,1130)}ESTO {\c&H009AB38F\fscx112\fscy112}ES{\r} UN
+Dialogue: 1,0:00:14.14,0:00:14.28,Sub,,0,0,0,,{\an5\pos(540,1130)}ESTO ES {\c&H009AB38F\fscx112\fscy112}UN{\r}
+Dialogue: 1,0:00:14.28,0:00:14.90,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}HORNO.{\r}
+Dialogue: 1,0:00:14.90,0:00:14.94,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}Y{\r} MIRA.
+Dialogue: 1,0:00:14.94,0:00:15.43,Sub,,0,0,0,,{\an5\pos(540,1130)}Y {\c&H009AB38F\fscx112\fscy112}MIRA.{\r}
+Dialogue: 1,0:00:18.68,0:00:19.32,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}CUBITOS{\r}
+Dialogue: 1,0:00:19.32,0:00:20.21,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx124\fscy124}ENTEROS.{\r}
+Dialogue: 1,0:00:23.72,0:00:24.36,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}19{\r} HORAS.
+Dialogue: 1,0:00:24.36,0:00:25.16,Sub,,0,0,0,,{\an5\pos(540,1130)}19 {\c&H009AB38F\fscx112\fscy112}HORAS.{\r}
+Dialogue: 1,0:00:25.16,0:00:25.30,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}SE{\r} LLAMA GÉLIDA.
+Dialogue: 1,0:00:25.30,0:00:25.58,Sub,,0,0,0,,{\an5\pos(540,1130)}SE {\c&H009AB38F\fscx112\fscy112}LLAMA{\r} GÉLIDA.
+Dialogue: 1,0:00:25.58,0:00:26.36,Sub,,0,0,0,,{\an5\pos(540,1130)}SE LLAMA {\c&H009AB38F\fscx124\fscy124}GÉLIDA.{\r}
+Dialogue: 1,0:00:26.36,0:00:26.86,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}ENLACE{\r} EN EL
+Dialogue: 1,0:00:26.86,0:00:27.14,Sub,,0,0,0,,{\an5\pos(540,1130)}ENLACE {\c&H009AB38F\fscx112\fscy112}EN{\r} EL
+Dialogue: 1,0:00:27.14,0:00:27.24,Sub,,0,0,0,,{\an5\pos(540,1130)}ENLACE EN {\c&H009AB38F\fscx112\fscy112}EL{\r}
+Dialogue: 1,0:00:27.24,0:00:27.91,Sub,,0,0,0,,{\an5\pos(540,1130)}{\fscx86\fscy86\t(0,90,\fscx100\fscy100)}{\c&H009AB38F\fscx112\fscy112}PERFIL.{\r}
+Dialogue: 3,0:00:00.40,0:00:02.20,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}03:12
+Dialogue: 3,0:00:04.07,0:00:05.47,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}08:00
+Dialogue: 3,0:00:10.07,0:00:11.47,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}12:30
+Dialogue: 3,0:00:11.73,0:00:13.23,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}15:40 · 34 °C
+Dialogue: 3,0:00:16.60,0:00:18.20,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}19:30
+Dialogue: 3,0:00:20.23,0:00:21.73,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}22:40
+Dialogue: 2,0:00:21.98,0:00:23.38,Resplandor,,0,0,0,,{\an5\pos(540,1120)\fs106\blur18\alpha&H60&}{\fad(180,220)\fscx92\fscy92\t(0,400,\fscx100\fscy100)}SECA POR FUERA
+Dialogue: 3,0:00:21.98,0:00:23.38,Producto,,0,0,0,,{\an5\pos(540,1120)\fs106}{\fad(180,220)\fscx92\fscy92\t(0,400,\fscx100\fscy100)}SECA POR FUERA
+Dialogue: 3,0:00:23.53,0:00:25.13,Hora,,0,0,0,,{\an5\pos(540,470)\fs104}{\fad(90,160)\fscx90\fscy90\t(0,140,\fscx100\fscy100)}03:12
+Dialogue: 3,0:00:26.37,0:00:28.57,Cta,,0,0,0,,{\an5\pos(540,1000)\fs56}{\fad(80,150)\fscx85\fscy85\t(0,140,\fscx100\fscy100)}GÉLIDA · ENLACE EN EL PERFIL
+Dialogue: 4,0:00:00.00,0:00:28.20,Etiqueta,,0,0,0,,{\an7\pos(84,292)}Vídeo generado con IA

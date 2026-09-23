@@ -108,6 +108,12 @@ def expandir(anuncio: dict, base: Path) -> dict:
         for k, (d0, d1) in enumerate(tramos):
             q = dict(p)
             q.pop("apretar", None)
+            if k:
+                # Lo que pasa UNA vez por plano va solo en el primer trozo (si no, cada trozo
+                # abriría en negro o volvería a desenfocar).
+                q.pop("abre_negro", None)
+                if q.get("movil"):
+                    q["movil"] = {c: v for c, v in q["movil"].items() if c not in ("enfoque", "caidas")}
             q["desde"], q["hasta"] = d0, d1
             if len(tramos) > 1:
                 z = dict(p.get("zoom", {}))
@@ -167,6 +173,8 @@ def resolver(anuncio: dict, base: Path) -> tuple[list[dict], list[str]]:
     juntas += [{"tipo": "corte"}] * (len(planos) - 1 - len(juntas))
     for i, p in enumerate(planos):
         p["_i"] = i
+        p["_grano_global"] = (anuncio.get("realismo") or {}).get("grano")
+        p["_voz_solapa"] = (anuncio.get("realismo") or {}).get("voz") == "solapa"
         p["_clip"] = (base / p["clip"]).resolve()
         p["_info"] = sondear(p["_clip"])
         rampa = next((e for e in p.get("efectos", []) if e["tipo"] == "rampa"), None)
@@ -192,6 +200,8 @@ def resolver(anuncio: dict, base: Path) -> tuple[list[dict], list[str]]:
             a["_barrido_sale"] = b["_barrido_entra"] = True
         elif tipo == "flash":
             a["_flash_sale"] = b["_flash_entra"] = True
+        elif tipo == "negro":
+            a["_negro_sale"] = b["_negro_entra"] = True
         L = _q(float(j.get("jcut", 0)))
         rampa_ab = any(e["tipo"] == "rampa" for e in a.get("efectos", []) + b.get("efectos", []))
         if L and rampa_ab:
@@ -255,6 +265,8 @@ def render_plano(p: dict, destino: Path, franja: Path, pip_png: tuple[Path, Path
     q["efectos"] = [dict(e, t=float(e["t"]) - Lin) if "t" in e else e for e in p.get("efectos", [])]
     if rapido:
         q["grano"] = False
+    elif "grano" not in p and p.get("_grano_global"):
+        q["grano"] = p["_grano_global"]
     cmd = [FFMPEG, "-v", "error", "-y", "-i", str(p["_clip"])]
     entradas, n = {}, 1
     fija = ["-loop", "1", "-framerate", str(FPS), "-t", f"{dur + 0.5:.3f}", "-i"]
@@ -296,6 +308,10 @@ def voz_plano(p: dict, tmp: Path) -> np.ndarray:
     d = p["_dur"]
     af = (f"atrim=start={a0:.4f}:end={a0 + d:.4f},asetpts=PTS-STARTPTS,"
           f"afade=t=in:d=0.008,afade=t=out:st={max(0, d - 0.012):.4f}:d=0.012")
+    if p.get("_voz_solapa"):
+        # Micro de solapa: corte de graves, cuerpo del pecho, presencia y un compresor suave.
+        af += (",highpass=f=80,equalizer=f=450:t=q:w=1.4:g=2,equalizer=f=4000:t=q:w=1.2:g=1.5,"
+               "acompressor=threshold=-22dB:ratio=3:attack=8:release=120:makeup=2")
     subprocess.run([FFMPEG, "-v", "error", "-y", "-i", str(fuente), "-af", af, "-ar", str(SR), "-ac", "2",
                     str(wav)], check=True)
     x = sonido.leer_wav(wav)
@@ -386,8 +402,8 @@ def montar(ruta_json: Path, rapido: bool = False, depurar: bool = False) -> Path
         subprocess.run([FFMPEG, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", "lista.txt",
                         "-i", "final.wav", "-vf", "ass=subs.ass:fontsdir=fuentes", "-map", "0:v", "-map", "1:a",
                         "-t", f"{total:.3f}", "-r", str(FPS), "-c:v", "libx264", "-preset",
-                        "veryfast" if rapido else "medium", "-crf", "18", "-pix_fmt", "yuv420p",
-                        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(salida)],
+                        "veryfast" if rapido else "medium", "-crf", "18", "-maxrate", "14M", "-bufsize", "28M",
+                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(salida)],
                        check=True, cwd=tmp)
         final = sondear(salida)
         esperados = sum(efectos.fotogramas(p["_v_dur"]) for p in planos)

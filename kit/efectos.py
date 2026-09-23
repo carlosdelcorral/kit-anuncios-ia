@@ -36,6 +36,8 @@ def expr_zoom(p: dict, dur: float) -> str:
         base = max(base, BASE_SACUDIDA)
     if p.get("_barrido_entra") or p.get("_barrido_sale"):
         base = max(base, BASE_BARRIDO)
+    if (p.get("movil") or {}).get("mano"):
+        base = max(base, 1.06)
     k = f"{_f(base)}*(1+{_f(z.get('entrada', 0.0))}*exp(-t/0.12))*(1+{_f(z.get('empuje', 0.0))}*t/{_f(dur)})"
     for e in p.get("efectos", []):
         if e["tipo"] == "zoom_seco":
@@ -52,6 +54,13 @@ def expr_desplazamiento(p: dict, dur: float) -> tuple[str, str]:
             env = f"{_f(a)}*exp(-(t-{t0})/0.09)*gte(t,{t0})"
             dx.append(f"{env}*sin(2*PI*27*(t-{t0}))")
             dy.append(f"{env}*0.7*cos(2*PI*21*(t-{t0}))")
+    movil = p.get("movil") or {}
+    if movil.get("mano"):
+        # Temblor de mano de móvil: deriva lenta de senos no armónicos (nunca vibración digital ni
+        # estabilizado de gimbal). Fases distintas por plano para que no se repita el patrón.
+        m, f = float(movil["mano"]), 1.7 * (p.get("_i", 0) + 1)
+        dx.append(f"{_f(m)}*(9*sin(2*PI*0.23*t+{_f(f)})+5*sin(2*PI*0.61*t+{_f(f * 1.3)})+2*sin(2*PI*1.7*t+{_f(f * 0.4)}))")
+        dy.append(f"{_f(m)}*(12*sin(2*PI*0.19*t+{_f(f * 2.1)})+6*sin(2*PI*0.53*t+{_f(f * 0.7)})+2*sin(2*PI*2.3*t+{_f(f)}))")
     d = BARRIDO_DUR
     if p.get("_barrido_sale"):
         dx.append(f"{BARRIDO_PX}*pow(clip((t-{_f(dur - d)})/{_f(d)},0,1),2)")
@@ -104,6 +113,32 @@ def cadena(p: dict, info: dict, dur: float, entradas: dict) -> str:
         c.append("fade=t=in:st=0:d=0.14:color=white")
     if p.get("_flash_sale"):
         c.append(f"fade=t=out:st={_f(dur - 0.05)}:d=0.05:color=white")
+    # 5b · lo que hace que parezca un móvil: exposición y balance que respiran, enfoque que busca,
+    # la distorsión del frontal y un píxel de aberración cromática
+    movil = p.get("movil") or {}
+    if movil.get("exposicion"):
+        fz = 1.3 * (p.get("_i", 0) + 1)
+        caidas = "".join(f"-0.045*exp(-pow((t-{_f(t0)})/0.35,2))" for t0 in movil.get("caidas", []))
+        c.append(f"eq=eval=frame:brightness='0.012*sin(2*PI*t/6.5+{_f(fz)}){caidas}'"
+                 f":gamma_r='1+0.012*sin(2*PI*t/9+{_f(fz)})':gamma_b='1-0.012*sin(2*PI*t/9+{_f(fz)})'")
+    for t0 in movil.get("enfoque", []):
+        c.append(f"gblur=sigma=2.2:enable='between(t,{_f(t0)},{_f(t0 + 0.14)})'")
+        c.append(f"gblur=sigma=1.1:enable='between(t,{_f(t0 + 0.14)},{_f(t0 + 0.32)})'")
+    if p.get("noche"):
+        # Móvil a oscuras: más oscuro, frío y sin saturación, con las sombras cerradas.
+        k = float(p["noche"]) if not isinstance(p["noche"], bool) else 1.0
+        c.append(f"eq=brightness={_f(-0.12 * k)}:contrast={_f(1 + 0.08 * k)}:saturation={_f(1 - 0.3 * k)}:gamma={_f(1 - 0.1 * k)}")
+        c.append(f"colorbalance=rs={_f(-0.05 * k)}:bs={_f(0.10 * k)}:bm={_f(0.05 * k)}")
+    if movil.get("frontal"):
+        c.append("lenscorrection=k1=0.02:k2=0.005:i=bilinear")
+    if movil:
+        c.append("rgbashift=rh=-1:bh=1")
+    if p.get("abre_negro"):
+        c.append(f"fade=t=in:st={_f(float(p['abre_negro']))}:d=0.12:color=black")
+    if p.get("_negro_entra"):
+        c.append("fade=t=in:st=0:d=0.10:color=black")
+    if p.get("_negro_sale"):
+        c.append(f"fade=t=out:st={_f(dur - 0.08)}:d=0.08:color=black")
     # 6b · tinte de color (p. ej. rojo cuando te matan)
     for e in p.get("efectos", []):
         if e["tipo"] == "tinte":
@@ -140,7 +175,14 @@ def cadena(p: dict, info: dict, dur: float, entradas: dict) -> str:
     # 8 · grano y etalonaje suave (unifica la textura de la IA) y duración exacta
     grano = p.get("grano", True)
     fin = []
-    if grano:
+    if grano == "movil":
+        # Grano de sensor: más en las sombras que en las luces (el de un móvil con poca luz).
+        partes.append(f"[{ultimo}]format=yuv420p,split[ga][gb];[gb]noise=alls=16:allf=t[gn];"
+                      "[ga][gn]blend=c0_expr='A+(B-A)*(1.15-A/255)*0.7':c1_expr='A+(B-A)*0.35':"
+                      "c2_expr='A+(B-A)*0.35'[vg]")
+        ultimo = "vg"
+        fin += ["eq=contrast=1.02:saturation=1.03", "vignette=PI/6"]
+    elif grano:
         fin += ["noise=alls=5:allf=t+u", "eq=contrast=1.03:saturation=1.04", "vignette=PI/5"]
     # Duración EXACTA en fotogramas: `trim=duration` dejaba uno de más por plano y la imagen se iba
     # retrasando respecto al audio (24 planos → ~0,7 s al final).
